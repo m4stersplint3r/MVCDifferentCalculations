@@ -1,0 +1,12 @@
+﻿@{
+    ViewData["Title"] = "Calculator";
+}
+@model Calculator
+<h1>@ViewData["Title"]</h1>
+<form action="CalculatorResult" method="post">
+    First number: <input type="number" name="x" value=@Model.X />
+    Operand: <input type="text" name="operand" value=@Model.Operand />
+    Second number: <input type="number" name="y" value=@Model.Y />
+    <input type="submit" value="Calculate" />
+</form>
+<h3>@Model.X @Model.Operand @Model.Y = @Model.Result</h3>

@@ -1,0 +1,14 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Division";
+}
+@model Division
+<h1>@ViewData["Title"]</h1>
+<form action="DivisionResult" method="post">
+        First number: <input type="number" name="x" value=@Model.X />
+        Second number: <input type="number" name="y" value=@Model.Y />
+        <input type="submit" value="Calculate" />
+</form>
+<h3>@Model.X / @Model.Y = @Model.Result with a remainder of @Model.Remainder </h3> 

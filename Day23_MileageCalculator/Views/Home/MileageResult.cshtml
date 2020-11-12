@@ -1,0 +1,21 @@
+﻿@{
+	ViewData["Title"] = "Mileage Result";
+}
+
+@*model (lower case) with the model's datatype
+	Tells our view what type of model it's using
+*@
+@model MileageCalculator
+
+<h3>The number of miles you can drive before getting more gas: @Model.result</h3>
+
+<h3>Trip Distance: @Model.distance</h3>
+@if (Model.enoughGas)	
+{
+	
+	<h3 style="color: green">You have enough gas for the trip</h3>
+}
+else
+{
+	<h3 style="color: red">You need more gas for the trip</h3>
+}
